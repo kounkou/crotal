@@ -7,25 +7,30 @@ import (
 )
 
 const CONFIG_FILENAME string = "crotal.json"
+const NOT_FOUND_ERROR int    = -1
 
 func readJSONToken(filename string, keyId string) (int, error) {
     data, err := ioutil.ReadFile(filename)
 
     if err != nil {
-        panic(err)
+        return NOT_FOUND_ERROR, err
     }
 
     obj := map[string]int{}
     if err := json.Unmarshal(data, &obj); err != nil {
-        panic(err)
+        return NOT_FOUND_ERROR, err
     }
 
-    return obj[keyId], err
+    if v, s := obj[keyId]; s {
+        return v, err
+    }
+
+    return NOT_FOUND_ERROR, err
 }
 
 func GetLimit(keyId string) (int, error) {
     if _, err := os.Stat(CONFIG_FILENAME); os.IsNotExist(err) {
-        return -1, err
+        return NOT_FOUND_ERROR, err
     }
 
     return readJSONToken(CONFIG_FILENAME, keyId)
