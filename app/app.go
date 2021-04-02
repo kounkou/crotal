@@ -10,7 +10,7 @@ func main() {
     r, err := crotal.Crotal(keyId)
 
     if err != nil {
-        fmt.Println("Error getting the crotal config")
+        fmt.Println(err)
     }
 
     fmt.Println(r)
