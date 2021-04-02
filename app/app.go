@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-    keyId := "user_1"
+    keyId := "012345678910"
     r, err := crotal.Crotal(keyId)
 
     if err != nil {
