@@ -4,6 +4,12 @@
 # crotal
 Crotal makes it easy to retrieve the configuration value for a given key.
 
+# Installation
+```
+go get github.com/kounkou/crotal
+go build
+```
+
 # Usage
 Add a json file called `crotal.json` with your configurations to your 
 root directory.
