@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-    keyId := "012345678910"
-    r, err := crotal.Crotal(keyId)
+    account := "019876543210"
+    r, err := crotal.Crotal(account)
 
     if err != nil {
         fmt.Println(err)
