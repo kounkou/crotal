@@ -1,17 +1,17 @@
 package main
 
 import (
-        "fmt"
-        "github.com/kounkou/crotal"
+	"fmt"
+	"github.com/kounkou/crotal"
 )
 
 func main() {
-    account := "019876543210"
-    r, err := crotal.Crotal(account)
+	account := "019876543210"
 
-    if err != nil {
-        fmt.Println(err)
-    }
+	r, err := crotal.Crotal(account)
+	if err != nil {
+		fmt.Println(err)
+	}
 
-    fmt.Println(r)
+	fmt.Println(r)
 }
