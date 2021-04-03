@@ -1,7 +1,7 @@
 [![license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/kounkou/crotal/blob/master/LICENSE)
 
 
-# crotal
+# Crotal
 Crotal makes it easy to retrieve the configuration value for a given key.
 
 # Installation
